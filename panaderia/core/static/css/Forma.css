@@ -1,0 +1,446 @@
+/*Etiqueta de cuerpo Inicio-QS-Galeria*/
+
+html, body{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    width: 100%;
+    height: 100%;
+    font-family: sans-serif;
+    letter-spacing: 0.03em;
+    line-height: 1.6;
+}
+
+/*Etiqueta de botones*/
+
+#btnBuscar{
+    border-color: #e94f37; 
+    color: #e94f37;
+    margin-right: 20px;
+    margin-left: -5px;
+  }
+  
+  #btnBuscar:hover{
+    background-color: #e94f37; 
+    color: #ffffff;
+  }
+  
+  #btnRegistrarse{
+    border-color: #007BFF; 
+    color: #007BFF;
+  }
+  
+  #btnRegistrarse:hover{
+    background-color: #0069D9; 
+    color: #ffffff;
+  }
+
+/*Etiqueta tarjetas 1 pagina */
+
+.title{
+    text-align: center;
+    font-size: 40px;
+    color: black ;
+    margin-top: 100px;
+    font-weight: 100;
+    cursor: default;
+} 
+
+.container{
+    width: 100%;
+    max-width: 1200px;
+    height: 430px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: auto;
+    cursor: default;
+}
+
+.container .card{
+    width: 330px;
+    height: 460px;
+    border-radius: 8px;
+    overflow: hidden;
+    margin: 20px;
+    text-align: center;
+    cursor: default;
+}
+
+.container .card:hover{
+    box-shadow: 0 12px 16px rgba(0,0,0,0.2);
+}
+
+.container .card img{
+    width: 330px;
+    height: 220px;
+}
+
+.container .card h4{
+    font-weight: 600;
+}
+
+.container .card p{
+    padding: 0 1rem;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+/*Etiqueta botón hamburguesa*/
+
+.navbar-toggler-icon{
+    display: flex;
+    flex-direction: column;
+}
+
+.navbar-toggler-icon{
+    display: inline-block;
+    width: 1.5em;
+    height: 1.5em;
+    vertical-align: middle;
+    content: "";
+}
+
+.navbar-toggler{
+    cursor: pointer;
+}
+
+h2{
+    text-align: center;
+}
+
+.navbar{
+    box-shadow: 0px 2px 2px ;
+    position: fixed;
+    z-index: 1;
+    display: flex;
+    transition: 0.3s;
+    width: 100%;
+}
+
+/*Etiqueta carusel Inicio 1 pagina*/
+
+.container2{
+    width: 90%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    border: 6px;
+    margin: 5;
+    float:none;
+}
+
+.carousel-item img{
+    height: 500px;
+}
+
+/*Etiqueta descripcion en inicio */
+
+.container3{
+    width: 90%;
+    margin: 90px auto;
+    outline: 3px solid;
+    position:relative;
+    display:flex;
+    justify-content: center;
+    cursor: default;
+}
+
+.jumbotron jumbotron-fluid{ 
+    width: 60%;
+    height: 60%;
+}
+
+/*Etiqueta video*/
+
+iframe{
+    width: 65%;
+    height: 450px;
+}
+
+/*Etiqueta Descripcion quienes somos - mision - vision 3 pagina*/
+
+.container4{
+    width: 90%;
+    max-width: 1200px;
+    height: 430px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: auto;
+    cursor: default;
+}
+
+.card1{
+    height: 350px;
+    width: 800px;
+    display: flex;
+    overflow: hidden;
+    background: wheat;
+    box-shadow: 0 5px 10px #deb887;
+    cursor: default;
+    border-radius: 10px;
+    margin: 20px;
+}
+
+.card2{
+    height: 370px;
+    width: 800px;
+    display: flex;
+    overflow: hidden;
+    background: grey;
+    box-shadow: 0 5px 10px gray;
+    cursor: default;
+    border-radius: 10px;
+    margin: 20px;
+}
+
+.card3{
+    height: 350px;
+    width: 800px;
+    display: flex;
+    overflow: hidden;
+    background: grey;
+    box-shadow: 0 5px 10px gray;
+    cursor: default;
+    border-radius: 10px;
+    margin: 20px;
+}
+
+.img1{
+    box-shadow: 2px 5px 20px rgba(0,0,0,0.4);
+    width: 60%;
+    height: 100%;
+}
+
+.card-text{
+    font-weight: 600;
+}
+
+/*Etiqueta carusel galeria*/
+
+.container5{
+    width: 100%;
+    padding-right: 10px;
+    padding-left: 10px;
+    margin-right: auto;
+    margin-left: auto;
+    border: 6px;
+    margin: 5;
+}
+
+/*Etiqueta Galeria*/
+
+.photos{
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.photos .gallery{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 150px;
+    padding: 20px;
+    grid-gap: 10px;
+}
+
+.photos .gallery img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.photos .gallery .img-a{
+    grid-column: 2/3;
+}
+
+.photos .gallery .img-b{
+    grid-column: 1/2;
+}
+
+.photos .gallery .img-i{
+    grid-column: 1/3;
+}
+
+/*Etiqueta Boton inicio*/
+
+.contenedor{
+    width: 90%;
+    max-width: 1000px;
+    margin: 20px auto;
+}
+
+.contenedor .article{
+    line-height: 28px;
+}
+
+.contenedor .article .btn-abrir-popup{
+    padding: 0 20px;
+    margin-bottom: 20px;
+    height: 40px;
+    line-height: 40px;
+    border: none;
+    color: #fff;
+    background: #5e7de3;
+    border-radius: 3px;
+    font-family: sans-serif;
+    font-size: 16px;
+    cursor: pointer;
+    transition: .3s ease all;
+}
+
+.contenedor .article .btn-abrir-popup:hover{
+    background: rgba(94,125,227, .9);
+}
+
+.overlay{
+    background: rgba(0,0,0,.3);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+}
+
+.overlay.active{
+    visibility: visible;
+}
+
+.popup{
+    background: #f8f8f8;
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.3);
+    border-radius: 3px;
+    font-family: sans-serif;
+    padding: 20px;
+    text-align: center;
+    width: 600px;
+
+    transition: .3s ease all;
+    transform: scale(0.7);
+    opacity: 0;
+}
+
+.popup .btn-cerrar-popup{
+    font-size: 16px;
+    line-height: 16px;
+    display: block;
+    text-align: right;
+    color: #bbbb;
+    transition: .3s ease all;
+}
+
+.popup .btn-cerrar-popup:hover{
+    color: #000;
+}
+
+.popup h3{
+    font-size: 36px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    opacity: 0;
+}
+
+.popup form .contenedor-inputs{
+    opacity: 0;
+}
+
+.popup form .contenedor-inputs input{
+    width: 100%;
+    margin-bottom: 20px;
+    height: 52px;
+    line-height: 52px;
+    font-size: 18px;
+    text-align: center;
+    border: n1px solid #bbbbbb;
+}
+
+.popup form .btn-submit{
+    padding: 0 20px;
+    height: 40px;
+    line-height: 40px;
+    border: none;
+    color: #fff;
+    background: #5e7de3;
+    border-radius: 3px;
+    font-family: sans-serif;
+    font-size: 16px;
+    cursor: pointer;
+    transition: .3s ease all;
+}
+
+.popup form .btn-submit:hover{
+    background: rgba(94,125,227, .9);
+}
+
+.popup.active {opacity: 1; transform: scale(1);}
+.popup.active h3 { animation: entradaTitulo .8s ease .5s forwards; }
+.popup.active .contenedor-inputs { animation: entradaInputs 1s ease 2s forwards; }
+
+@keyframes entradaTitulo {
+    from {
+        transform: translateY(-25px);
+        opacity: 0;
+    }
+    to{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes entradaInputs {
+    form {opacity: 0;}
+    to {opacity: 1;}
+}
+
+/*Etiqueta footer*/
+
+footer{
+    width: 100%;
+    background-color: rgb(59, 35, 2);
+    display: flex;
+    cursor: pointer;
+    margin: 5;
+    box-sizing: border-box;
+    float: inline-end;
+}
+
+.col-lg-1{
+    color: aliceblue;
+    display: flex;
+    text-align: center;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.col-lg-2{
+    color: aliceblue;
+    display: flex;
+}
+
+.col-lg-3{
+    color: aliceblue;
+}
+
+.col-lg-3 .row{
+    color: aliceblue;
+    margin-top: 20px;
+}
+
+
+
+
+
+
+

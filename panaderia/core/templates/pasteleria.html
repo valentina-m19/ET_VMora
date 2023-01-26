@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disfruta nuestra pastelería</title>
+    {% load static %} 
+    <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/diseño.css' %}">
+
+    <script>
+        function MostrarFecha(){
+            document.getElementById('demo').innerHTML = Date();
+        }
+    </script>
+
+</head>
+<body>
+    <nav class="navbar navbar-expand-md navbar-light bg-light mb-4" id="barraNav">
+        <a href="inicio.html" id="logoBookStop">
+            <img src="{% static 'img/panycanela.jpg' %}" alt="logoPanaderia" width="70px">
+        </a>
+        <!-- botón hamburguesa -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+            aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'inicio' %}">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'QuienesSomos' %}">Quienes somos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'Galería' %}">Galería</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'contacto' %}">Contáctanos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'api' %}">API</a>
+                </li>
+            </ul>
+            <form class="form-inline mt-2 mt-md-0">
+                <input class="form-control mr-sm-2" type="text" placeholder="¿Qué buscas?" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit" id="btnBuscar">Buscar</button>
+            </form>
+            <div>
+                <a href="login.html" id="userPanaderia">
+                    <img src="{% static 'img/panycanela.jpg' %}" alt="userPanaderia" width="20px">Iniciar sesión
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <h4>Recuerda que nuestro horario de atencion es de 09:00 hrs hasta las 19:00 hrs</h4>
+    <h4>Considera con tiempo tu compra</h4>
+    <input type="button" value="Mostrar fecha" id="btnFecha" name="btnFecha"
+        onclick="MostrarFecha()">
+    <p id="demo"></p>
+
+    <hr>
+
+    <div class="container">
+        <h1>Pastelería</h1>
+
+        <br> 
+
+        <div class="producto-container">
+            <div class="producto" data-name="p-1">
+                <img src="{% static 'img/pastel3.jpg' %}">
+                <h3>Macarons</h3>
+                <div class="form-check">
+                    <input type="radio" class="form-check-input" value="1" id="radio1" name="grupo1">
+                    <label for="radio1" class="form-check-label">caja 3 Unidades ($4.500)</label>
+                </div>
+        
+                <div class="form-check">
+                    <input type="radio" class="form-check-input" value="2" id="radio2" name="grupo1">
+                    <label for="radio2" class="form-check-label">caja 5 unidades ($8.100)</label>
+                </div>
+        
+                <div class="form-check">
+                    <input type="radio" class="form-check-input" value="3" id="radio3" name="grupo1">
+                    <label for="radio3" class="form-check-label">caja 9 Unidades ($12.500)</label>
+                </div>
+        
+                <div class="form-check">
+                    <input type="radio" class="form-check-input" value="4" id="radio4" name="grupo1">
+                    <label for="radio4" class="form-check-label">caja 12 Unidades ($16.500)</label>
+                </div>
+        
+                <div class="form-check">
+                    <input type="radio" class="form-check-input" value="5" id="radio5" name="grupo1">
+                    <label for="radio5" class="form-check-label">caja 20 Unidades ($24.900)</label>
+                </div>
+
+                <input type="button" value="comprar" name="btnComprar" id="btnComprar" onclick="Comprar()">
+
+            </div>
+
+            <div class="producto" data-name="p-2">
+                <img src="{% static 'img/pastel8.jpg' %}">
+                <h3>Berlines</h3>
+                <div class="form-check">
+                    <input type="radio" class="form-check-input" value="1" id="radio1" name="grupo2">
+                    <label for="radio1" class="form-check-label">Relleno Manjar ($790)</label>
+                </div>
+        
+                <div class="form-check">
+                    <input type="radio" class="form-check-input" value="2" id="radio2" name="grupo2">
+                    <label for="radio2" class="form-check-label">Relleno Crema ($790)</label>
+                </div>
+
+                <input type="button" value="comprar" name="btnComprar" id="btnComprar" onclick="Comprar()">
+
+            </div>
+
+            <div class="producto" data-name="p-3">
+                <img src="{% static 'img/pastel9.jpg' %}">
+                <h3>Galletas</h3>
+                <div class="form-check">
+                    <input type="radio" class="form-check-input" value="1" id="radio1" name="grupo3">
+                    <label for="radio1" class="form-check-label">Galletas surtidas 80 grs. ($1.190)</label>
+                </div>
+        
+                <div class="form-check">
+                    <input type="radio" class="form-check-input" value="2" id="radio2" name="grupo3">
+                    <label for="radio2" class="form-check-label">Galletas surtidas 120 grs. ($1.790)</label>
+                </div>
+        
+                <div class="form-check">
+                    <input type="radio" class="form-check-input" value="3" id="radio3" name="grupo3">
+                    <label for="radio3" class="form-check-label">Galletas surtidas 150 grs. ($2.100)</label>
+                </div>
+        
+                <div class="form-check">
+                    <input type="radio" class="form-check-input" value="4" id="radio4" name="grupo3">
+                    <label for="radio4" class="form-check-label">Galletas surtidas 250 grs. ($3.190)</label>
+                </div>
+        
+                <div class="form-check">
+                    <input type="radio" class="form-check-input" value="5" id="radio5" name="grupo3">
+                    <label for="radio5" class="form-check-label">Galletas surtidas 450 grs. ($5.980)</label>
+                </div>
+
+                <input type="button" value="comprar" name="btnComprar" id="btnComprar" onclick="Comprar()">
+
+            </div>
+
+            <div class="producto" data-name="p-4">
+                <img src="{% static 'img/milhojas.jpg' %}">
+                <h3>MilHojas</h3>
+                <div class="form-check">
+                    <input type="radio" class="form-check-input" value="1" id="radio1" name="grupo4">
+                    <label for="radio1" class="form-check-label">Relleno Manjar ($790)</label>
+                </div>
+
+                <input type="button" value="comprar" name="btnComprar" id="btnComprar" onclick="Comprar()">
+
+            </div>
+
+            <div class="producto" data-name="p-5">
+                <img src="{% static 'img/pastel10.jpg' %}">
+                <h3>Donas</h3>
+                <div class="form-check">
+                    <input type="radio" class="form-check-input" value="1" id="radio1" name="grupo5">
+                    <label for="radio1" class="form-check-label">Dona de chocolate con cobertura de chocolate ($1.590)</label>
+                </div>
+        
+                <div class="form-check">
+                    <input type="radio" class="form-check-input" value="2" id="radio2" name="grupo5">
+                    <label for="radio2" class="form-check-label">Dona de chocolate glaseado ($1.190)</label>
+                </div>
+        
+                <div class="form-check">
+                    <input type="radio" class="form-check-input" value="3" id="radio3" name="grupo5">
+                    <label for="radio3" class="form-check-label">Dona rellena de manjar con cobertura de chocolate ($1.590)</label>
+                </div>
+        
+                <div class="form-check">
+                    <input type="radio" class="form-check-input" value="4" id="radio4" name="grupo5">
+                    <label for="radio4" class="form-check-label">Dona azucarada rellena de chocolate ($1.590)</label>
+                </div>
+        
+                <div class="form-check">
+                    <input type="radio" class="form-check-input" value="5" id="radio5" name="grupo5">
+                    <label for="radio5" class="form-check-label">Dona con cobertura de frutilla ($1.190)</label>
+                </div>
+                
+                <div class="form-check">
+                    <input type="radio" class="form-check-input" value="6" id="radio6" name="grupo5">
+                    <label for="radio6" class="form-check-label">Dona glaseada ($1.190)</label>
+                </div>
+
+                <div class="form-check">
+                    <input type="radio" class="form-check-input" value="7" id="radio7" name="grupo5">
+                    <label for="radio7" class="form-check-label">Dona azucarada con relleno de frambuesa ($1.590)</label>
+                </div>
+
+                <div class="form-check">
+                    <input type="radio" class="form-check-input" value="8" id="radio8" name="grupo5">
+                    <label for="radio8" class="form-check-label">Dona con cobertura de chocolate y diseño de vainilla ($1.590)</label>
+                </div>
+
+                <input type="button" value="comprar" name="btnComprar" id="btnComprar" onclick="Comprar()">
+
+            </div>
+
+            <div class="producto" data-name="p-6">
+                <img src="{% static 'img/pastel7.jpg' %}">
+                <h3>Cóctel</h3>
+                <div class="form-check">
+                    <input type="radio" class="form-check-input" value="1" id="radio1" name="grupo6">
+                    <label for="radio1" class="form-check-label">Pastelitos Cóctel 40 Un. ($18.000)</label>
+                </div>
+            
+                <div class="form-check">
+                    <input type="radio" class="form-check-input" value="2" id="radio2" name="grupo6">
+                    <label for="radio2" class="form-check-label">Pastelitos cóctel 60 Un. ($27.000)</label>
+                </div>
+
+                <input type="button" value="comprar" name="btnComprar" id="btnComprar" onclick="Comprar()">
+
+            </div>
+
+            <div class="producto" data-name="p-7">
+                <img src="{% static 'img/Torta-Marriet-001.jpg' %}">
+                <h3>Torta Moka</h3>
+                <div class="form-check">
+                    <input type="radio" class="form-check-input" value="1" id="radio1" name="grupo7">
+                    <label for="radio1" class="form-check-label">Torta Moka 16 prs ($16.900)</label>
+                </div>
+            
+                <div class="form-check">
+                    <input type="radio" class="form-check-input" value="2" id="radio2" name="grupo7">
+                    <label for="radio2" class="form-check-label">Torta Moka 24 prs ($25.000)</label>
+                </div>
+
+                <input type="button" value="comprar" name="btnComprar" id="btnComprar" onclick="Comprar()">
+
+            </div>
+
+            <div class="producto" data-name="p-8">
+                <img src="{% static 'img/tortaOreo.jpg' %}">
+                <h3>Torta Oreo</h3>
+                <div class="form-check">
+                    <input type="radio" class="form-check-input" value="1" id="radio1" name="grupo8">
+                    <label for="radio1" class="form-check-label">Torta Oreo 16 prs ($19.900)</label>
+                </div>
+            
+                <div class="form-check">
+                    <input type="radio" class="form-check-input" value="2" id="radio2" name="grupo8">
+                    <label for="radio2" class="form-check-label">Torta Oreo 24 prs ($29.000)</label>
+                </div>
+
+                <input type="button" value="comprar" name="btnComprar" id="btnComprar" onclick="Comprar()">
+
+            </div>
+
+            <div class="producto" data-name="p-9">
+                <img src="{% static 'img/e2c65542d1e62d8935dfa2026ceb2baa.jpg' %}">
+                <h3>Torta Chocolate relleno frutos rojos</h3>
+                <div class="form-check">
+                    <input type="radio" class="form-check-input" value="1" id="radio1" name="grupo9">
+                    <label for="radio1" class="form-check-label">Torta Chocolate 16 prs ($18.900)</label>
+                </div>
+            
+                <div class="form-check">
+                    <input type="radio" class="form-check-input" value="2" id="radio2" name="grupo9">
+                    <label for="radio2" class="form-check-label">Torta Chocolate 24 prs ($23.000)</label>
+                </div>
+
+                <input type="button" value="comprar" name="btnComprar" id="btnComprar" onclick="Comprar()">
+
+            </div>
+
+            <div class="producto" data-name="p-10">
+                <img src="{% static 'img/tortaFrutilla.jpg' %}">
+                <h3>Torta Frutilla</h3>
+                <div class="form-check">
+                    <input type="radio" class="form-check-input" value="1" id="radio1" name="grupo10">
+                    <label for="radio1" class="form-check-label">Torta Oreo 16 prs ($22.000)</label>
+                </div>
+            
+                <div class="form-check">
+                    <input type="radio" class="form-check-input" value="2" id="radio2" name="grupo10">
+                    <label for="radio2" class="form-check-label">Torta Oreo 24 prs ($30.000)</label>
+                </div>
+
+                <input type="button" value="comprar" name="btnComprar" id="btnComprar" onclick="Comprar()">
+
+            </div>
+
+            <div class="producto" data-name="p-11">
+                <img src="{% static 'img/tortaRedVelvet.jpg' %}">
+                <h3>Torta Red Velvet</h3>
+                <div class="form-check">
+                    <input type="radio" class="form-check-input" value="1" id="radio1" name="grupo11">
+                    <label for="radio1" class="form-check-label">Torta Oreo 16 prs ($25.000)</label>
+                </div>
+            
+                <div class="form-check">
+                    <input type="radio" class="form-check-input" value="2" id="radio2" name="grupo11">
+                    <label for="radio2" class="form-check-label">Torta Oreo 24 prs ($34.000)</label>
+                </div>
+
+                <input type="button" value="comprar" name="btnComprar" id="btnComprar" onclick="Comprar()">
+
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="row col-12">
+            <div class="col-lg-1">
+                <a href="inicio.html" id="linkFooter"><strong>INICIO</strong></a>
+            </div>
+            <div class="col-lg-2">
+                <strong>CONÓCENOS</strong>
+            </div>
+            <div class="col-lg-2">
+                <strong>GALERÍA</strong>
+            </div>
+
+            <div class="col-lg-2">
+                <strong>Síguenos</strong>
+                <br><br>
+                <div class="row">
+                    <img src="{% static 'img/2000px-Facebook_font_awesome.svg.png' %}" alt="" width="30px" height="30px"
+                        style=" margin-left: 15px;">
+                    <img src="{% static 'img/twitter.png' %}" alt="" width="30px" height="30px" style=" margin-left: 10px;">
+                    <img src="{% static 'img/Instagram.png' %}" alt="" width="30px" height="30px" style=" margin-left: 10px;">
+
+                </div>
+            </div>
+
+
+            <div class="col-lg-3">
+
+                <strong>Contacto</strong>
+                <br><br>
+                <div class="row">
+                    <img src="img/location.png "alt="" width="20px" height="20px"
+                        style="margin-right: 10px; margin-left: 15px;">
+                    <p>Nueva providencia 2021, Providencia</p>
+                </div>
+                <div class="row">
+                    <img src="img/fono.png" alt="" width="20px" height="20px"
+                        style="margin-right: 10px; margin-left: 15px;">
+                    <p>225554000</p>
+                </div>
+                <div class="row">
+                    <img src="img/email.png" alt="" width="20px" height="20px"
+                        style="margin-right: 10px; margin-left: 15px;">
+                    <p>panycanela.contac@gmail.cl</p>
+                </div>
+                <br><br><br>
+
+                <p>&copy; Pan y Canela - 2023</p>
+            </div>
+        </div>
+    </footer>
+    
+</body>
+
+    <script>window.jQuery || document.write('<script src="../assets/js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'js/validacion.js' %}"></script>
+
+</html>

@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disfruta nuestra panadería</title>
+    {% load static %} 
+    <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/diseño.css' %}">
+
+    <script>
+        function MostrarFecha(){
+            document.getElementById('demo').innerHTML = Date();
+        }
+    </script>
+
+</head>
+<body>
+    <nav class="navbar navbar-expand-md navbar-light bg-light mb-4" id="barraNav">
+        <a href="inicio.html" id="logoBookStop">
+            <img src="{% static 'img/panycanela.jpg' %}" alt="logoPanaderia" width="70px">
+        </a>
+        <!-- botón hamburguesa -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+            aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'inicio' %}">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'QuienesSomos' %}">Quienes somos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'Galería' %}">Galería</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'contacto' %}">Contáctanos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'api' %}">API</a>
+                </li>
+            </ul>
+            <form class="form-inline mt-2 mt-md-0">
+                <input class="form-control mr-sm-2" type="text" placeholder="¿Qué buscas?" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit" id="btnBuscar">Buscar</button>
+            </form>
+            <div>
+                <a href="login.html" id="userPanaderia">
+                    <img src="{% static 'img/panycanela.jpg' %}" alt="userPanaderia" width="20px">Iniciar sesión
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <h4>Recuerda que nuestro horario de atencion es de 09:00 hrs hasta las 19:00 hrs</h4>
+    <h4>Considera con tiempo tu compra</h4>
+    <input type="button" value="Mostrar fecha" id="btnFecha" name="btnFecha"
+        onclick="MostrarFecha()">
+    <p id="demo"></p>
+
+    <hr>
+
+    <div class="container">
+        <h3>Panadería</h3>
+        <div class="producto-container">
+            <div class="producto" data-name="p-1">
+                <img src="{% static 'img/hallullas.jpg' %}">
+                <h3>Hallulla</h3>
+                <div class="form-check">
+                    <input type="radio" class="form-check-input" value="1" id="radio1" name="grupo1">
+                    <label for="radio1" class="form-check-label">15 unidades ($2.290)</label>
+                </div>
+
+                <input type="button" value="comprar" name="btnComprar" id="btnComprar" onclick="Comprar()">
+
+            </div>
+
+            <div class="producto" data-name="p-2">
+                <img src="{% static 'img/marraqueta.jpg' %}">
+                <h3>Marraqueta</h3>
+                <div class="form-check">
+                    <input type="radio" class="form-check-input" value="1" id="radio1" name="grupo2">
+                    <label for="radio1" class="form-check-label">10 unidades ($2.090)</label>
+                </div>
+
+                <input type="button" value="comprar" name="btnComprar" id="btnComprar" onclick="Comprar()">
+
+            </div>
+
+            <div class="producto" data-name="p-3">
+                <img src="{% static 'img/panmolde.jpg' %}">
+                <h3>Pan de Molde</h3>
+                <div class="form-check">
+                    <input type="radio" class="form-check-input" value="1" id="radio1" name="grupo3">
+                    <label for="radio1" class="form-check-label">Pan Molde blanco sin gluten 400 grs. ($4.790)</label>       
+                </div>
+
+                <div class="form-check">
+                    <input type="radio" class="form-check-input" value="2" id="radio2" name="grupo3">
+                    <label for="radio2" class="form-check-label">Pan Molde blanco 500 grs. ($1.990)</label>       
+                </div>
+
+                <div class="form-check">
+                    <input type="radio" class="form-check-input" value="3" id="radio3" name="grupo3">
+                    <label for="radio3" class="form-check-label">Pan Molde multigrano sin gluten 420 grs. ($5.090)</label>       
+                </div>
+
+                <div class="form-check">
+                    <input type="radio" class="form-check-input" value="4" id="radio4" name="grupo3">
+                    <label for="radio4" class="form-check-label">Pan Molde multigrano 400 grs. ($1.950)</label>       
+                </div>
+
+                <input type="button" value="comprar" name="btnComprar" id="btnComprar" onclick="Comprar()">
+
+            </div>
+
+            <div class="producto" data-name="p-4">
+                <img src="{% static 'img/hamburguesa.jpg' %}">
+                <h3>Pan Frica</h3>
+                <div class="form-check">
+                    <input type="radio" class="form-check-input" value="1" id="radio1" name="grupo4">
+                    <label for="radio1" class="form-check-label">Pan frica grande 8 unidades ($1.990)</label>
+                </div>
+
+                <input type="button" value="comprar" name="btnComprar" id="btnComprar" onclick="Comprar()">
+
+            </div>
+
+            <div class="producto" data-name="p-5">
+                <img src="{% static 'img/baguete.jpg' %}">
+                <h3>Pan Baguette</h3>
+                <div class="form-check">
+                    <input type="radio" class="form-check-input" value="1" id="radio1" name="grupo5">
+                    <label for="radio1" class="form-check-label">Baguette ud. ($1.190)</label>
+                </div>
+
+                <input type="button" value="comprar" name="btnComprar" id="btnComprar" onclick="Comprar()">
+
+            </div>
+
+            <div class="producto" data-name="p-6">
+                <img src="{% static 'img/panCompleto.jpg' %}">
+                <h3>Pan para Completo</h3>
+                <div class="form-check">
+                    <input type="radio" class="form-check-input" value="1" id="radio1" name="grupo6">
+                    <label for="radio1" class="form-check-label">Pan de completo 8 ud. ($1.990)</label>
+                </div>
+
+                <input type="button" value="comprar" name="btnComprar" id="btnComprar" onclick="Comprar()">
+
+            </div>
+
+            <div class="producto" data-name="p-7">
+                <img src="{% static 'img/ciabatta.jpg' %}">
+                <h3>Pan Ciabatta</h3>
+                <div class="form-check">
+                    <input type="radio" class="form-check-input" value="1" id="radio1" name="grupo7">
+                    <label for="radio1" class="form-check-label">Ciabatta 5 unidades ($1.790)</label>
+                </div>
+
+                <input type="button" value="comprar" name="btnComprar" id="btnComprar" onclick="Comprar()">
+
+            </div>
+
+            <div class="producto" data-name="p-8">
+                <img src="{% static 'img/pantoscano.jpg' %}">
+                <h3>Pan Toscano</h3>
+                <div class="form-check">
+                    <input type="radio" class="form-check-input" value="1" id="radio1" name="grupo8">
+                    <label for="radio1" class="form-check-label">toscano 5 unidades ($1.890)</label>
+                </div>
+
+                <input type="button" value="comprar" name="btnComprar" id="btnComprar" onclick="Comprar()">
+
+            </div>
+
+            <div class="producto" data-name="p-9">
+                <img src="{% static 'img/pandulce.jpg' %}">
+                <h3>Panes Dulces</h3>
+                <div class="form-check">
+                    <input type="radio" class="form-check-input" value="1" id="radio1" name="grupo9">
+                    <label for="radio1" class="form-check-label">Media Luna ($590)</label>
+                </div>
+
+                <div class="form-check">
+                    <input type="radio" class="form-check-input" value="2" id="radio2" name="grupo9">
+                    <label for="radio2" class="form-check-label">Croissant relleno Manjar ($890)</label>
+                </div>
+
+                <div class="form-check">
+                    <input type="radio" class="form-check-input" value="3" id="radio3" name="grupo9">
+                    <label for="radio3" class="form-check-label">Danés ($890)</label>
+                </div>
+
+                <div class="form-check">
+                    <input type="radio" class="form-check-input" value="4" id="radio4" name="grupo9">
+                    <label for="radio4" class="form-check-label">Rollito Frambuesa ($890)</label>
+                </div>
+
+                <div class="form-check">
+                    <input type="radio" class="form-check-input" value="5" id="radio5" name="grupo9">
+                    <label for="radio5" class="form-check-label">Rollito Chocolate ($990)</label>
+                </div>
+
+                <div class="form-check">
+                    <input type="radio" class="form-check-input" value="6" id="radio6" name="grupo9">
+                    <label for="radio6" class="form-check-label">Ensaimada ($1.250)</label>
+                </div>
+
+                <div class="form-check">
+                    <input type="radio" class="form-check-input" value="7" id="radio7" name="grupo9">
+                    <label for="radio7" class="form-check-label">Trenza Crema ($2.100)</label>
+                </div>
+
+                <input type="button" value="comprar" name="btnComprar" id="btnComprar" onclick="Comprar()">
+
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="row col-12">
+            <div class="col-lg-1">
+                <a href="inicio.html" id="linkFooter"><strong>INICIO</strong></a>
+            </div>
+            <div class="col-lg-2">
+                <strong>CONÓCENOS</strong>
+            </div>
+            <div class="col-lg-2">
+                <strong>GALERÍA</strong>
+            </div>
+
+            <div class="col-lg-2">
+                <strong>Síguenos</strong>
+                <br><br>
+                <div class="row">
+                    <img src="{% static 'img/2000px-Facebook_font_awesome.svg.png' %}" alt="" width="30px" height="30px"
+                        style=" margin-left: 15px;">
+                    <img src="{% static 'img/twitter.png' %}" alt="" width="30px" height="30px" style=" margin-left: 10px;">
+                    <img src="{% static 'img/Instagram.png' %}" alt="" width="30px" height="30px" style=" margin-left: 10px;">
+
+                </div>
+            </div>
+
+
+            <div class="col-lg-3">
+
+                <strong>Contacto</strong>
+                <br><br>
+                <div class="row">
+                    <img src="{% static 'img/location.png' %}" alt="" width="20px" height="20px"
+                        style="margin-right: 10px; margin-left: 15px;">
+                    <p>Nueva providencia 2021, Providencia</p>
+                </div>
+                <div class="row">
+                    <img src="{% static 'img/fono.png' %}" alt="" width="20px" height="20px"
+                        style="margin-right: 10px; margin-left: 15px;">
+                    <p>225554000</p>
+                </div>
+                <div class="row">
+                    <img src="{% static 'img/email.png' %}" alt="" width="20px" height="20px"
+                        style="margin-right: 10px; margin-left: 15px;">
+                    <p>panycanela.contac@gmail.cl</p>
+                </div>
+                <br><br><br>
+
+                <p>&copy; Pan y Canela - 2023</p>
+            </div>
+        </div>
+    </footer>
+    
+    
+</body>
+
+    <script>window.jQuery || document.write('<script src="../assets/js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'js/validacion.js' %}"></script>
+    
+</html>
+

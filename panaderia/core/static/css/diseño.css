@@ -1,0 +1,172 @@
+*{
+    font-family: sans-serif;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    transition: all .2s linear;
+    text-transform: capitalize;
+} 
+
+html,body{
+    font-size: 100%;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    background: #eee;
+}
+
+/*Etiqueta de Ventana Modal*/
+
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 3rem 2rem;
+}
+
+.container .title{
+    font-size: 3.5rem;
+    color: #444;
+    margin-bottom: 3rem;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.container .producto-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 2rem;
+}
+
+.container .producto-container .producto{
+    text-align: center;
+    padding: 3rem 2rem;
+    background: #fff;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+    outline: .1rem solid #ccc;
+    outline-offset: -1.5rem;
+    cursor: pointer;
+}
+
+.container .producto-container .producto:hover{
+    outline: .2rem solid #222;
+    outline-offset: 0;
+}
+
+.container .producto-container .producto img{
+    height: 25rem;
+    width: 290px;
+}
+
+.container .producto-container .producto:hover img{
+    transform: scale(.9);
+}
+
+.container .producto-container .producto h3{
+    padding: .5rem 0;
+    font-size: 2rem;
+    color: #444;
+}
+
+.container .producto-container .producto:hover h3{
+    color: #27ae60;
+}
+
+.container .producto-container .producto .price{
+    font-size: 2rem;
+    color: #444;
+}
+
+/*Etiqueta botón hamburguesa*/
+
+.navbar-toggler-icon{
+    display: flex;
+    flex-direction: column;
+}
+
+.navbar-toggler-icon{
+    display: inline-block;
+    width: 1.5em;
+    height: 1.5em;
+    vertical-align: middle;
+    content: "";
+}
+
+.navbar-toggler{
+    cursor: pointer;
+}
+
+h2{
+    text-align: center;
+}
+
+.navbar{
+    box-shadow: 0px 2px 2px ;
+    position: fixed;
+    z-index: 1;
+    display: flex;
+    transition: 0.3s;
+    width: 100%;
+}
+
+/*Etiqueta footer*/
+
+footer{
+    width: 100%;
+    background-color: rgb(59, 35, 2);
+    display: flex;
+    cursor: pointer;
+    margin: 5;
+    box-sizing: border-box;
+    float: inline-end;
+}
+
+.col-lg-1{
+    color: aliceblue;
+    display: flex;
+    text-align: center;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.col-lg-2{
+    color: aliceblue;
+    display: flex;
+}
+
+.col-lg-3{
+    color: aliceblue;
+}
+
+.col-lg-3 .row{
+    color: aliceblue;
+    margin-top: 20px;
+}
+
+.container .col{
+    width: 500px;
+    justify-content: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto Clientes</title>
+    {% load static %} 
+    <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/diseño.css' %}">
+
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-md navbar-light bg-light mb-4" id="barraNav">
+        <a href="inicio.html" id="logoBookStop">
+            <img src="{% static 'img/panycanela.jpg' %}" alt="logoPanaderia" width="70px">
+        </a>
+        <!-- botón hamburguesa -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+            aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'inicio' %}">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'QuienesSomos' %}">Quienes somos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'Galería' %}">Galería</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'contacto' %}">Contáctanos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'api' %}">API</a>
+                </li>
+            </ul>
+            <form class="form-inline mt-2 mt-md-0">
+                <input class="form-control mr-sm-2" type="text" placeholder="¿Qué buscas?" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit" id="btnBuscar">Buscar</button>
+            </form>
+            <div>
+                <a href="login.html" id="userPanaderia">
+                    <img src="{% static 'img/panycanela.jpg' %}" alt="userPanaderia" width="20px">Iniciar sesión
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <br>
+    <br>
+
+    <div class="container">
+        <div class="col">
+            <h2>Contáctanos</h2>
+
+            <for method="post" action="#" name="datos">
+                <div class="form-group">
+                    <label for="nombre">Nombre y Apellido: </label>
+                    <input type="text" class="form-control" id="nombre" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="telefono">Teléfono: </label>
+                    <input type="tel" class="form-control" id="telefono">
+                </div>
+
+                <div class="form-group">
+                    <label for="correo">Correo Electrónico: </label>
+                    <input type="email" class="form-control" id="correo" required> 
+                </div>
+
+                <div class="form-group">
+                    <label for="lista">Motivo</label>
+                    <select class="form-control" id="lista">
+                        <option>-Selecciona-</option>
+                        <option>Preguntas</option>
+                        <option>Reclamos</option>
+                        <option>Cometarios varios(sugerencias y felicitaciones)</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="comentarios">Comentario</label>
+                    <textarea rows="5" id="comentarios" class="form-control"></textarea>
+                </div>
+
+                <a href="#" class="btn btn-primary">Enviar</a>
+            </for>
+        </div>
+    </div>
+
+    <footer>
+        <div class="row col-12">
+            <div class="col-lg-1">
+                <a href="index.html" id="linkFooter"><strong>INICIO</strong></a>
+            </div>
+            <div class="col-lg-2">
+                <strong>CONÓCENOS</strong>
+            </div>
+            <div class="col-lg-2">
+                <strong>GALERÍA</strong>
+            </div>
+
+            <div class="col-lg-2">
+                <strong>Síguenos</strong>
+                <br><br>
+                <div class="row">
+                    <img src="{% static 'img/2000px-Facebook_font_awesome.svg.png' %}" alt="" width="30px" height="30px"
+                        style=" margin-left: 15px;">
+                    <img src="{% static 'img/twitter.png' %}" alt="" width="30px" height="30px" style=" margin-left: 10px;">
+                    <img src="{% static 'img/Instagram.png' %}" alt="" width="30px" height="30px" style=" margin-left: 10px;">
+
+                </div>
+            </div>
+
+
+            <div class="col-lg-3">
+
+                <strong>Contacto</strong>
+                <br><br>
+                <div class="row">
+                    <img src="{% static 'img/location.png' %}" alt="" width="20px" height="20px"
+                        style="margin-right: 10px; margin-left: 15px;">
+                    <p>Nueva providencia 2021 - Providencia</p>
+                </div>
+                <div class="row">
+                    <img src="{% static 'img/fono.png' %}" alt="" width="20px" height="20px"
+                        style="margin-right: 10px; margin-left: 15px;">
+                    <p>225554000</p>
+                </div>
+                <div class="row">
+                    <img src="{% static 'img/email.png' %}" alt="" width="20px" height="20px"
+                        style="margin-right: 10px; margin-left: 15px;">
+                    <p>panycanela.contac@gmail.cl</p>
+                </div>
+                <br><br><br>
+
+                <p>&copy; Pan y Canela - 2023</p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+    <script>window.jQuery || document.write('<script src="../assets/js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'js/validacion.js' %}"></script>
+
+</html>
